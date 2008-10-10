@@ -1,0 +1,192 @@
+IDEAS
+- parse methods & params
+- parse containing folder so can group items
+- controls from windows
+- event handlers
+- class members
+
+
+AUDITING
+From: Lars Jensen <larsjensen@rcn.com>
+
+> One thing that comes to my mind is to check every function
+> if it actually returns a value...
+
+Oh Lordy yes! That's worth the price of an upgrade right there.
+
+lj
+
+
+-------------------------------------------------------------
+ISSUES
+- how are <ControlBehavior> linked to the Control
+(no response on the list, think I'd have to buy support for this)
+
+
+How to add methods from extends methods in modules?
+- use Objective-C categories (ugly presentation as appear in Objective-C)
+- build up all standard classes in XSLT structures and add to them in memory,
+writing them out only at the end
+
+
+
+-------------------------------------------------------------
+Stuff to parse from the XML Project
+BY EXAMPLE MAINLY
+
+<block type="Module" ID="-1120797912">
+ <ObjName>TemplateChunk</ObjName>
+ <Property>mPicture as Picture</Property>
+ <Method>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemName>Constructor</ItemName>
+  <ItemParams>inCentreX as scn, inCentreY as scn, inWidth as scn, inHeight as scn</ItemParams>
+  <ItemResult></ItemResult>
+
+
+The distinguishing elements WITHIN a <block>
+
+ <IsInterface>0</IsInterface>
+<IsClass>1</IsClass>
+<IsApplicationObject>1</IsApplicationObject>
+
+
+
+BLOCK TYPES
+
+<block type="Window" ID="-1129636217">
+<block type="Module" ID="-1120797912">
+<block type="Menu" ID="-1129636218">
+ <ObjName>MenuBar1</ObjName>
+<block type="Folder" ID="-1120175158">
+<block type="AnyFile" REF TO EXTERNAL
+
+ITEMS WITHIN WINDOWS & APP
+ <MenuHandler>
+  <ItemName>AlignLeftEdges</ItemName>
+
+
+ <ControlBehavior>
+  <ObjName></ObjName>
+  <ObjSize>208</ObjSize>
+  <Superclass>ESToolbarSeparator</Superclass>
+  <IsInterface>0</IsInterface>
+  <HookInstance>
+   <TextEncoding>131072</TextEncoding>
+   <ItemName>Open</ItemName>
+
+ <ControlBehavior>
+  <ObjName></ObjName>
+  <ObjSize>116</ObjSize>
+  <Superclass>Canvas</Superclass>
+  <IsInterface>0</IsInterface>
+  <HookInstance>
+   <TextEncoding>1536</TextEncoding>
+   <ItemName>Paint</ItemName>
+   <ItemSource>
+    <StartSelRow>1</StartSelRow>
+    <StartSelCol>0</StartSelCol>
+    <EndSelRow>1</EndSelRow>
+    <EndSelCol>51</EndSelCol>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Paint(g As Graphics)</SourceLine>
+    <SourceLine>if (mHRuler &lt;&gt; nil) then mHRuler.BlitRuler(g, 0, 0)</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+  <HookInstance>
+   <TextEncoding>1536</TextEncoding>
+   <ItemName>Open</ItemName>
+   <ItemSource>
+    <StartSelRow>4</StartSelRow>
+    <StartSelCol>10</StartSelCol>
+    <EndSelRow>4</EndSelRow>
+    <EndSelCol>13</EndSelCol>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Open()</SourceLine>
+    <SourceLine>' Add the horizontal ruler.</SourceLine>
+    <SourceLine>dim ruler as GraphicRuler</SourceLine>
+    <SourceLine>dim style as FSRulerStyle</SourceLine>
+    <SourceLine>mHRuler = new GraphicRuler(me.width, me.height, 1)</SourceLine>
+    <SourceLine>style = new FScm10</SourceLine>
+    <SourceLine>style.selColor = RGB(220, 220, 220)</SourceLine>
+    <SourceLine>mHRuler.Reset(style, 3, self.mRulerScale)</SourceLine>
+    <SourceLine></SourceLine>
+    <SourceLine>mRulerStyle = kRulerStyleCM</SourceLine>
+    <SourceLine></SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
+
+
+ <Control>
+  <ControlClass>MouseEnterToolbarButton</ControlClass>
+  <ItemName>Canvas</ItemName>
+  <PropertyVal Name="Name">UndoButton</PropertyVal>
+
+
+Events on the Window
+ <HookInstance>
+  <ItemName>Moved</ItemName>
+
+
+
+
+
+MEMBERS OF CLASSES
+inside block
+ <Property>mToolID as integer</Property>
+
+ <Method>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemName>HandleMouseUp</ItemName>
+  <ItemParams>inX as integer, inY as integer</ItemParams>
+  <ItemResult></ItemResult>
+
+
+
+ <Constant>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemName>kDefaultWidth</ItemName>
+  <ItemType>1</ItemType>
+  <ItemDef>200</ItemDef>
+
+
+ACCESS CONTROL
+<ItemFlags> seems to control access
+0 = public
+1= protected
+8 = empty method
+32 = private
+33 = private constant???
+
+
+NOTES
+
+ <Note>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemName>AD Changes 2004-01-15</ItemName>
+  <ItemFlags>1</ItemFlags>
+  <ItemSource>
+   <StartSelRow>13</StartSelRow>
+   <StartSelCol>17</StartSelCol>
+   <EndSelRow>13</EndSelRow>
+   <EndSelCol>17</EndSelCol>
+   <TextEncoding>134217984</TextEncoding>
+   <NoteLine>AD Changes 2004-01-15</NoteLine>
+   <NoteLine>This sample has been extended by adding the File menu and menu handlers for Open and Save As</NoteLine>
+
+
+
+FOLDERS
+<block type="Folder" ID="-1138033298">
+ <ObjName>Shape Classes</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+</block>
+
+A Nested item within that Folder has
+ <ObjContainerID>-1138033298</ObjContainerID>
+
+
+
