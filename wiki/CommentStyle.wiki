@@ -5,7 +5,9 @@
 
 Comments in the RB source are currently not processed - none of the source lines are processed other than declarations.
 
-That's actually not a hugely difficult change to make if someone gave me a little encouragement - I could copy comment blocks that were just inside the method into a Java comment with appropriate Doxygen /** marker.
+That's actually not a hugely difficult change to make if someone gave me a little encouragement (already received from the person to who I originally emailed these instructions - see [http://code.google.com/p/rb2doxy/issues/detail?id=10 issue 10]).
+
+I could copy comment blocks that were just inside the method into a Java comment with appropriate Doxygen /** marker.
 
 I normally put the comments in a separate file.
 
