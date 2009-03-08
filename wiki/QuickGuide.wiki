@@ -1,0 +1,9 @@
+#summary Quick steps to use RB2Doxy.
+#labels Featured
+
+ # save your project as XML, note that currently it doesn't handle external files so you have to pull everything into one
+ # run RunRB2Doxy and File - Open that project XML file
+ # choose Transform -> File and select a new .java filename
+ # run Doxygen over the directory containing your newly created .java file
+
+Note: there is a basic summary in the AAREADME file showing the command-line options for running the XSLT transformation using a Java processor. This is still possible but a bit out of date as I added the RunRB2Doxy project. It is convenient for people setting up batch processes.
