@@ -1,0 +1,1 @@
+Note: there is a basic summary in the AAREADME file showing the command-line options for running the XSLT transformation using a Java processor. This is still possible but a bit out of date as I added the RunRB2Doxy project. It is convenient for people setting up batch processes.
