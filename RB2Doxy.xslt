@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="text" version="1.0" encoding="UTF-8"  />
 <!-- think XML Spy bug fails to process <xsl:template match="block[@type='Module']"> and shows whole file first!
-so do the grotty xsl:choice instead of having severalm template matches
+so do the grotty xsl:choice instead of having several template matches
  -->
 
 <xsl:template match="/">
